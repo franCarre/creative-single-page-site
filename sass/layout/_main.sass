@@ -1,0 +1,100 @@
+.img
+  object-fit: cover
+  margin-bottom: -0.3rem
+  height: 20rem
+  width: 100%
+  @media screen and (min-width: 768px)
+    height: 60.6rem
+  @media screen and (min-width: 992px)
+    height: 80rem
+
+.hero
+  display: flex
+  flex-direction: column
+  position: relative
+  @media screen and (min-width: 768px)
+    flex-direction: row-reverse
+    justify-content: space-between
+  & > .container
+    @media screen and (min-width: 768px)
+      height: 100%
+      display: flex
+      align-items: center
+      position: absolute
+      left: 0
+      right: 0
+  &__content
+    padding-top: 5.6rem
+    padding-bottom: 9.6rem
+    max-width: 55rem
+    z-index: 1
+    @media screen and (min-width: 768px)
+      padding-top: 7.7rem
+      padding-bottom: 15rem
+    @media screen and (min-width: 992px)
+      padding-top: 11.2rem
+      padding-bottom: 16rem
+
+.design
+  background-color: $col-bg-black
+  display: flex
+  flex-direction: column
+  @media screen and (min-width: 768px)
+    flex-direction: row
+    justify-content: space-between
+  & > .container
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50%
+  &__img
+    @media screen and (min-width: 768px)
+      height: 65.8rem
+    @media screen and (min-width: 992px)
+      height: 98.4rem
+
+  &__content
+    background-color: $col-bg-black
+    max-width: 44.5rem
+
+  & picture
+    @media screen and (min-width: 768px)
+      width: 50%
+
+  & > .tilda
+    transform: translateY(-10rem)
+
+
+.features
+  background-color: $col-red
+  display: flex
+  flex-direction: column
+
+
+
+.footer
+  height: 39rem
+  @media screen and (min-width: 768px)
+    height: 25rem
+  @media screen and (min-width: 992px)
+    height: 36.8rem
+  & > .container
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: center
+    height: 100%
+    @media screen and (min-width: 576px)
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+  &__heading
+    max-width: 32rem
+    @media screen and (min-width: 992px)
+      max-width: 60rem
+  &__btn
+
+    @media screen and (min-width: 992px)   
+      transform: translateY(-3rem)
+    

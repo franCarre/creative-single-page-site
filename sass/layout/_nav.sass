@@ -1,0 +1,21 @@
+.nav
+  display: none
+  height: 100%
+  @media screen and (min-width: 768px)
+    display: flex
+
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__item
+    &:not(:first-of-type)
+      margin-left: 3.2rem
+    
+
+.toggle-nav
+  display: block
+  cursor: pointer
+  @media screen and (min-width: 768px)
+    display: none

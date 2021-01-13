@@ -1,0 +1,62 @@
+.container
+  max-width: $space-max-width
+  padding: 0 4rem
+  @media screen and (min-width: 768px)
+    margin: 0 auto
+
+    
+.btn
+  color: $col-white
+  cursor: pointer
+  font-size: 1.8rem
+  font-weight: $bold
+  padding: 2.5rem 4.5rem
+  text-decoration: none
+  transition: $transition all
+  position: relative
+  &--red
+    background-color: $col-red
+    &:hover
+      background-color: #FF9393
+  &--black
+    background-color: $col-bg-black
+    &:hover
+      background-color: #434356
+  &--line
+    background-color: transparent
+    border-bottom: 1px solid $col-red
+    color: $col-red
+    padding: 0
+    padding-bottom: 1rem
+  &:hover
+    padding-right: 6.5rem
+    padding-left: 2.5rem
+    &::after
+      opacity: 1
+      right: 2.5rem
+  &::after
+    content: '\00bb'
+    position: absolute
+    opacity: 0
+    top: 0
+    right: 3rem
+    padding: 2.4rem 0
+    transition: 0.5s
+  
+.tilda
+  position: absolute
+  transform: translateY(-1.5rem)
+  height: 2.9rem
+  width: 6.3rem
+  @media screen and (min-width: 768px)
+    left: 50%
+    transform: translate(-50%, -9rem)
+  @media screen and (min-width: 992px)
+    transform: translate(-50%, -12rem)
+    height: 6rem
+    width: 13.4rem
+  
+  
+.arrow
+  background: transparent
+  cursor: pointer
