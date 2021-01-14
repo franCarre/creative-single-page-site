@@ -1,7 +1,7 @@
 .img
   object-fit: cover
   margin-bottom: -0.3rem
-  height: 20rem
+  height: 22rem
   width: 100%
   @media screen and (min-width: 768px)
     height: 60.6rem
@@ -44,19 +44,21 @@
     justify-content: space-between
   & > .container
     @media screen and (min-width: 768px)
-      display: flex
-      align-items: center
-      justify-content: center
+
       width: 50%
   &__img
     @media screen and (min-width: 768px)
       height: 65.8rem
     @media screen and (min-width: 992px)
       height: 98.4rem
-
   &__content
     background-color: $col-bg-black
-    max-width: 44.5rem
+    padding: 7.2rem 0
+    @media screen and (min-width: 768px)
+      padding: 12rem 0 12rem 7rem
+      max-width: 40em
+    @media screen and (min-width: 992px)
+      padding: 20rem 0 20rem 15.4rem
 
   & picture
     @media screen and (min-width: 768px)
@@ -68,12 +70,151 @@
 
 .features
   background-color: $col-red
+  position: relative
+  @media screen and (min-width: 768px)
+    background: linear-gradient(90deg, $col-white 42%, $col-red 42%)
+  @media screen and (min-width: 992px)
+    background: linear-gradient(90deg, $col-white 40%, $col-red 40%)
+  &::before
+    background-color: $col-red
+    content: ''
+    right: 0
+    position: absolute
+    z-index: 5
+    @media screen and (min-width: 768px)
+      height: 12rem
+      top: -12rem
+      width: 58%
+    @media screen and (min-width: 992px)
+      height: 14.3rem
+      top: -14.3rem
+      width: 60%
+  & > .container
+    display: flex
+    flex-direction: column
+    @media screen and (min-width: 768px)
+      flex-direction: row
+  &__heading
+    margin-top: 9.6rem
+    @media screen and (min-width: 768px)
+      margin-top: 12.6rem
+      margin-bottom: 0
+      max-width: 28rem
+    @media screen and (min-width: 992px)
+      margin-top: 20rem
+      max-width: 54rem
+    & h2
+      @media screen and (max-width: 767px)
+        color: $col-white
+
+
+
+  &__list
+    padding-bottom: 9.6rem
+    z-index: 2
+    @media screen and (min-width: 768px)
+      padding-left: 15rem
+      padding-bottom: 12rem
+    @media screen and (min-width: 768px)
+      padding-left: 28.5rem
+      
+
+  &__item
+    padding-left: 1.6rem
+    max-width: 94rem
+
+
+
+.slider
+  background-color: $col-bg-black
   display: flex
   flex-direction: column
+  position: relative
+  @media screen and (min-width: 768px)
+    background: none
+    flex-direction: row-reverse
+    justify-content: space-between
+  &::before
+    background-color: $col-bg-black
+    content: ''
+    display: none
+    left: 0
+    position: absolute
+    width: 50%
+    height: 27.2rem
+    @media screen and (min-width: 768px)
+      display: block
+      height: 35.2rem
+    @media screen and (min-width: 992px)
+      height: 52.8rem
+  & > .container
+    @media screen and (min-width: 768px)
+      height: 100%
+      display: flex
+      position: absolute
+      left: 0
+      right: 0
+      height: 27.2rem
+    @media screen and (min-width: 768px)
+      align-items: center
+      height: 35.2rem
+    @media screen and (min-width: 992px)
+      height: 52.8rem
+  &__info
+    position: relative
+    padding: 6.4rem 0    
+  &__heading
+    max-width: 27rem
+    @media screen and (min-width: 992px)
+      max-width: 44rem    
+  &__img
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    background-image: url(../assets/mobile/image-slide-1.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    margin-bottom: -0.3rem
+    height: 40.4rem
+    width: 100%
+    z-index: 1
+    position: relative
+    transition: $transition
+    &::after
+      content: ''
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 65%, rgba(0,0,0,1))
+      position: absolute
+      width: 100%
+      height: 100%
+    @media screen and (min-width: 768px)
+      background-image: url(../assets/tablet/image-slide-1.jpg)
+      height: 47.2rem
+      width: 58%
+      z-index: -1
+    @media screen and (min-width: 992px)
+      background-image: url(../assets/desktop/image-slide-1.jpg)
+      height: 72.8rem
+      width: 60%
+  &__description
+    padding-right: 4rem
+    padding-bottom: 4.5rem
+    text-align: right
+    z-index: 1
+    @media screen and (min-width: 768px)
+      padding-right: 4rem
+      padding-bottom: 6.8rem 
+    @media screen and (min-width: 992px)
+      padding-right: 10rem
+    & p
+      margin-bottom: 0
+
+  &__nav
+    display: none
 
 
 
 .footer
+  position: relative
   height: 39rem
   @media screen and (min-width: 768px)
     height: 25rem
@@ -91,10 +232,11 @@
       align-items: center
   &__heading
     max-width: 32rem
+    @media screen and (min-width: 768px)
+      margin-bottom: 0
     @media screen and (min-width: 992px)
       max-width: 60rem
-  &__btn
 
-    @media screen and (min-width: 992px)   
-      transform: translateY(-3rem)
+
+
     

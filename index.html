@@ -14,19 +14,24 @@
 <header class="header">
   <div class="container">
     <img class="logo" src="./assets/desktop/logo.svg" alt="Creative">
-    <img class="toggle-nav" src="./assets/mobile/icon-hamburger.svg">
     <nav class="nav">
-      <ul class="nav__list">
+      <ul class="nav__list" data-aos="fade-down">
         <li class="nav__item"><a class="t-nav-link" href="#">About</a></li>
         <li class="nav__item"><a class="t-nav-link" href="#">Service</a></li>
         <li class="nav__item"><a class="t-nav-link" href="#">Projects</a></li>
         <li class="nav__item"><a class="btn btn--black" href="#">Schedule a call</a></li>     
       </ul>
     </nav>
+    <button class="nav__toggle" aria-label="toggle nav button" aria-pressed="true">
+      <span class="nav__toggle__bar nav__toggle__bar--1" aria-hidden="true"></span>
+      <span class="nav__toggle__bar nav__toggle__bar--2" aria-hidden="true"></span>
+      <span class="nav__toggle__bar nav__toggle__bar--3" aria-hidden="true"></span>
+    </button>
   </div>
 </header>
 
 <main class="main">
+
   <section class="hero">
     <picture>
       <source srcset="./assets/desktop/image-hero.jpg" media="(min-width: 992px)">
@@ -34,7 +39,7 @@
       <img class="img hero__img" src="./assets/mobile/image-hero.jpg">
     </picture>
     <div class="container">
-      <div class="hero__content">
+      <div class="hero__content" data-aos="fade-right">
         <h1>Branding & website design agency</h1>
         <p class="t-dark">
           We specialize in visual storytelling by creating cohesive brand and website design 
@@ -53,7 +58,7 @@
     </picture>
     <div class="container">
       <img class="tilda" src="./assets/desktop/bg-pattern-wave-red.svg" alt="tilda">
-      <div class="design__content">
+      <div class="design__content" data-aos="fade-up">
         <h2 class="t-light"><span class="t-red">Design</span> is strategic.</h2>
         <p class="t-light">
           A well-crafted design strategy consistently produces desired outcomes and brand awareness. 
@@ -64,53 +69,79 @@
   </section>
 
   <section class="features">
-    <h2 class="features__heading">
-      Our approach for creating a winning brand
-    </h2>
-    <div class="features__list">
-      <div class="features__item">
-        <span class="t-number">01</span>
-        <h3>Brand strategy</h3>
-        <p class="t-light">
-          Brand strategy is critical for long-term success. Outshining competitors and capturing 
-          the target audience are key.
-        </p>
+    <div class="container">
+      <div class="features__heading" data-aos="fade-up">
+        <h2>
+          Our approach for creating a winning brand
+        </h2>
       </div>
-      <div class="features__item">
-        <span class="t-number">02</span>
-        <h3>Brand design</h3>
-        <p class="t-light">
-          Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
-          value effectively.
-        </p>
-      </div>
-      <div class="features__item">
-        <span class="t-number">03</span>
-        <h3>Web design</h3>
-        <p class="t-light">
-          A beautifully crafted website is the best tool for brand awareness, and ultimately results 
-          in increased revenues.
-        </p>
+      <div class="features__list">
+        <div class="features__item">
+          <div class="t-number">01</div>
+          <h3>Brand strategy</h3>
+          <p class="t-light">
+            Brand strategy is critical for long-term success. Outshining competitors and capturing 
+            the target audience are key.
+          </p>
+        </div>
+        <div class="features__item">
+          <div class="t-number">02</div>
+          <h3>Brand design</h3>
+          <p class="t-light">
+            Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
+            value effectively.
+          </p>
+        </div>
+        <div class="features__item">
+          <div class="t-number">03</div>
+          <h3>Web design</h3>
+          <p class="t-light">
+            A beautifully crafted website is the best tool for brand awareness, and ultimately results 
+            in increased revenues.
+          </p>
+        </div>
       </div>
     </div>
   </section>
+
 
   <section class="slider">
-    <img class="slider__img" src="./assets/mobile/image-slide-1.jpg" alt="">
-    <div class="slider__info">
-      <h2 class="t-light">
-        Brand naming & guidelines
-      </h2>
-      <div class="slider__arrows">
-        <button class="arrow arrow--left"><img src="./assets/desktop/icon-arrow-previous.svg" alt="<"></button>
-        <button class="arrow arrow--right"><img src="./assets/desktop/icon-arrow-next.svg" alt=">"></button>
+
+    <img class="tilda tilda--slider" src="./assets/desktop/bg-pattern-wavy-white.svg" alt="tilda">
+   
+    <div class="slider__img" id="slide-img">
+      <div class="slider__description">
+        <h4 id="slide-description">Lean Product Roadmap</h4>
+        <p class="t-light" id="slide-year">2019 Project</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="slider__info" data-aos="fade-up">
+        <h2 class="slider__heading t-light" id="slide-heading">
+          Brand naming & guidelines
+        </h2>
+        <div class="slider__arrows">
+          <button class="arrow arrow--left"><img src="./assets/desktop/icon-arrow-previous.svg" alt="<"></button>
+          <button class="arrow arrow--right"><img src="./assets/desktop/icon-arrow-next.svg" alt=">"></button>
+        </div>
       </div>
     </div>
 
 
   </section>
+  <!--  -->
 
+  
+      <ul class="slider__nav">
+        <li class="btn btn--slider btn--active"  id="slide__indicator-1">1</li>
+        <li class="btn btn--slider" id="slide__indicator-2">2</li>
+        <li class="btn btn--slider" id="slide__indicator-3">3</li>
+      </ul>
+  <!--  -->
+  
   <footer class="footer">
+    <img class="tilda tilda--footer" src="./assets/desktop/bg-pattern-wave-red.svg" alt="tilda">
     <div class="container">
       <h2 class="footer__heading">Let's build something great together.</h2>
       <a class="footer__btn btn btn--red" href="#">Schedule a Call</a>
@@ -118,23 +149,7 @@
   </footer>
 
 </main>
-  <!--
 
-  Brand naming & guidelines
-  Lean Product Roadmap 
-  2019 project
-
-  Brand identity & merchandise
-  New Majestic Hotel 
-  2018 Project
-  
-  Brand identity & web design
-  Crypto Dashboard
-  2016 Project
-
-  
-
-   -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="script.js"></script>
 </body>

@@ -3,19 +3,59 @@
   height: 100%
   @media screen and (min-width: 768px)
     display: flex
+  &--active
+    display: flex
 
   &__list
+    background-color: $col-bg-black
     display: flex
-    justify-content: space-between
+    flex-direction: column
     align-items: center
+    justify-content: center
+    position: absolute
+    top: 11rem
+    right: 4rem
+    height: 29.2rem
+    width: 25.2rem
+    z-index: 1
+    @media screen and (min-width: 768px)
+      background-color: initial
+      flex-direction: row
+      justify-content: space-between
+      position: relative
+      top: 0
+      height: initial
+      width: initial
+
 
   &__item
+    &:not(:last-of-type)
+      margin-bottom: 2.4rem
+      @media screen and (min-width: 768px)
+        margin-bottom: 0
     &:not(:first-of-type)
-      margin-left: 3.2rem
+      @media screen and (min-width: 768px)
+        margin-left: 3.2rem
     
 
-.toggle-nav
-  display: block
-  cursor: pointer
-  @media screen and (min-width: 768px)
-    display: none
+  &__toggle
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 2rem
+    border: none
+    background-color: transparent
+    cursor: pointer
+    outline: none
+    position: relative
+    z-index: 10
+    @media screen and (min-width: 768px)
+      display: none
+    &__bar
+      display: inline-block
+      width: 2.25rem
+      height: 2px
+      background-color: $col-bg-black
+      transition: all .5s
+

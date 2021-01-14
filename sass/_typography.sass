@@ -2,7 +2,7 @@ body
   font-family: $font-family
   font-size: 1.5rem
 
-h1, h2, h3
+h1, h2, h3, h4
   color: $col-t-black
   font-weight: $bold
 
@@ -29,18 +29,31 @@ h2
     line-height: 6.4rem
     margin-bottom: 4.3rem
 
-
 h3
   color: $col-white
-  font-size: 2rem
-  line-height: 3.2rem
+  font-size: 1.6rem
+  line-height: 2.5rem
+  margin-bottom: 1.5rem
+  @media screen and (min-width: 992px)
+    font-size: 2rem
+    line-height: 3.2rem
+
+h4
+  color: $col-white
+  font-size: 1.5rem
+  line-height: 2rem
+  @media screen and (min-width: 768px)
+    font-size: 2rem
+    line-height: 3.2rem
 
 p
   color: $col-t-black
-  font-size: 1.8rem
-  line-height: 3.2rem
+  font-size: 1.5rem
+  line-height: 2.5rem
   margin-bottom: 4rem
   @media screen and (min-width: 768px)
+    font-size: 1.8rem
+    line-height: 3.2rem
     margin-bottom: 3.2rem
   @media screen and (min-width: 992px)
     margin-bottom: 4.8rem
@@ -68,4 +81,9 @@ p
   font-size: 8rem
   font-weight: $bold
   line-height: 8.8rem
-  opacity: 0.75
+  opacity: 0.25
+  position: relative
+  transform: translate(-1.6rem, 4.4rem)
+  @media screen and (min-width: 992px)
+    transform: translate(-6rem, 4.4rem)
+
